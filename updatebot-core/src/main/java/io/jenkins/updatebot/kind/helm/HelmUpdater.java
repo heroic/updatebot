@@ -57,7 +57,7 @@ public class HelmUpdater extends UpdaterSupport {
     public boolean isApplicable(CommandContext context) {
         boolean answer = isFile(context.file(CHART_YAML));
         if (!answer) {
-            answer = fileExistsInDir(context.getDir(), CHART_YAML);
+            answer = fileExistsInDir(context.getDir(), REQUIREMENTS_YAML);
             if (!answer) {
                 return isFile(context.file(VALUES_YAML));
             }
